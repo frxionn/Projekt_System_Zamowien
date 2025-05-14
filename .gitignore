@@ -1,0 +1,17 @@
+# Qt build files
+build-*
+*.pro.user
+*.qmake.stash
+*.autosave
+Makefile*
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.user
+
+# CMake (jeśli używasz)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
