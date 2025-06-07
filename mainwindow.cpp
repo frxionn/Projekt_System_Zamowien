@@ -10,6 +10,24 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //funkcjonalności przycisków - przechodzenie do innych widoków
+
+    connect(ui->buttonHelp, &QPushButton::clicked, this, [this]() {
+        ui->stackedWidget->setCurrentWidget(ui->pageHelp);; // Przejście na stronę pomocy
+    });
+
+    connect(ui->buttonBack, &QPushButton::clicked, this, [this]() {
+       ui->stackedWidget->setCurrentWidget(ui->pageHome);; // Powrót do strony głównej
+    });
+
+    connect(ui->buttonStolik1, &QPushButton::clicked, this, [this]() {
+        ui->stackedWidget->setCurrentWidget(ui->pageStolik1);; // Przejście do strony stolik1
+    });
+
+    connect(ui->buttonBackStolik1, &QPushButton::clicked, this, [this]() {
+        ui->stackedWidget->setCurrentWidget(ui->pageHome);; // Powrót do strony głównej
+    });
 }
 
 MainWindow::~MainWindow()
