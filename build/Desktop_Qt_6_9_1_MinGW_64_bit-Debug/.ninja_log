@@ -1,0 +1,9 @@
+# ninja log v6
+4	701	7712053371277673	Projekt_System_Zamowien_autogen/timestamp	17698670d2984080
+4	701	7712053371277673	Projekt_System_Zamowien_autogen/mocs_compilation.cpp	17698670d2984080
+4	701	7712053371277673	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Projekt_System_Zamowien_autogen/timestamp	17698670d2984080
+4	701	7712053371277673	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Projekt_System_Zamowien_autogen/mocs_compilation.cpp	17698670d2984080
+712	2944	7712053372303514	CMakeFiles/Projekt_System_Zamowien.dir/Projekt_System_Zamowien_autogen/mocs_compilation.cpp.obj	b865303d0065f157
+715	3047	7712053372343740	CMakeFiles/Projekt_System_Zamowien.dir/main.cpp.obj	34232f568ac4f236
+719	3455	7712053372378743	CMakeFiles/Projekt_System_Zamowien.dir/mainwindow.cpp.obj	f8511e6fc5a45d28
+3455	4205	7712053399741120	Projekt_System_Zamowien.exe	8d0ba9533de07af9
