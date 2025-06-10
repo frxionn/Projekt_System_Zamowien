@@ -55,26 +55,26 @@ MainWindow::MainWindow(QWidget *parent)
 
     //przycisk dodaj zamowienie
 
-    connect(ui->btnDodajZamowienie, &QPushButton::clicked, this, [=]() {
-        DodajZamowienieDialog dialog(this);
-        if (dialog.exec() == QDialog::Accepted) {
-            QString produkt = dialog.getWybranyProdukt();
-            if (!produkt.isEmpty()) {
-                QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
-                aktualnyTekst += produkt + "\n";
-                ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
-            }
-        }
-    });
+    // connect(ui->btnDodajZamowienie, &QPushButton::clicked, this, [=]() {
+    //     DodajZamowienieDialog dialog(this);
+    //     if (dialog.exec() == QDialog::Accepted) {
+    //         QString produkt = dialog.getWybranyProdukt();
+    //         if (!produkt.isEmpty()) {
+    //             QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
+    //             aktualnyTekst += produkt + "\n";
+    //             ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
+    //         }
+    //     }
+    // });
 
-    //przycisk usun zamowienie
-    connect(ui->btnUsunZamowienie, &QPushButton::clicked, this, [=]() {
-        QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
-        aktualnyTekst = "";
-        ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
-    });
+    // //przycisk usun zamowienie
+    // connect(ui->btnUsunZamowienie, &QPushButton::clicked, this, [=]() {
+    //     QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
+    //     aktualnyTekst = "";
+    //     ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
+    // });
 }
-}
+
 
 MainWindow::~MainWindow()
 {

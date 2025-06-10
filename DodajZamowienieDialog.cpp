@@ -1,4 +1,4 @@
-#include "DodajZamowienieDialog.h"
+#include "dodajzamowieniedialog.h"
 #include <QVBoxLayout>
 #include <QPushButton>
 

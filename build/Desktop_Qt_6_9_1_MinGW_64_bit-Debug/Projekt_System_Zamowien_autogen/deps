@@ -7,6 +7,8 @@ Projekt_System_Zamowien_autogen/timestamp: \
 	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Projekt_System_Zamowien_autogen/moc_predefs.h \
 	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/databasemanager.cpp \
 	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/databasemanager.h \
+	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/dodajzamowieniedialog.cpp \
+	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/dodajzamowieniedialog.h \
 	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/main.cpp \
 	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/mainwindow.cpp \
 	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/mainwindow.h \
@@ -59,11 +61,13 @@ Projekt_System_Zamowien_autogen/timestamp: \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qhash.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qhashfunctions.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qiodevicebase.h \
+	F:/Qt/6.9.1/mingw_64/include/QtCore/qitemselectionmodel.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qiterable.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qiterator.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qlatin1stringview.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qline.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qlist.h \
+	F:/Qt/6.9.1/mingw_64/include/QtCore/qlocale.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qlogging.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qmalloc.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qmap.h \
@@ -85,6 +89,7 @@ Projekt_System_Zamowien_autogen/timestamp: \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qprocessordetection.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qrect.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qrefcount.h \
+	F:/Qt/6.9.1/mingw_64/include/QtCore/qregularexpression.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qscopedpointer.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qscopeguard.h \
 	F:/Qt/6.9.1/mingw_64/include/QtCore/qset.h \
@@ -161,6 +166,7 @@ Projekt_System_Zamowien_autogen/timestamp: \
 	F:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h \
 	F:/Qt/6.9.1/mingw_64/include/QtGui/qtguiglobal.h \
 	F:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
+	F:/Qt/6.9.1/mingw_64/include/QtGui/qvalidator.h \
 	F:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
 	F:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
 	F:/Qt/6.9.1/mingw_64/include/QtSql/qsqldatabase.h \
@@ -169,9 +175,25 @@ Projekt_System_Zamowien_autogen/timestamp: \
 	F:/Qt/6.9.1/mingw_64/include/QtSql/qtsql-config.h \
 	F:/Qt/6.9.1/mingw_64/include/QtSql/qtsqlexports.h \
 	F:/Qt/6.9.1/mingw_64/include/QtSql/qtsqlglobal.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/QDialog \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/QListWidget \
 	F:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractitemview.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractslider.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qframe.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qlistview.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qlistwidget.h \
 	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qrubberband.h \
 	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qslider.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qstyle.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qstyleoption.h \
+	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabbar.h \
 	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h \
 	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
 	F:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \

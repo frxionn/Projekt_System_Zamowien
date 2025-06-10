@@ -12,13 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
-#include <QtWidgets/QTableView>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -58,13 +56,13 @@ public:
     QSpacerItem *verticalSpacer_7;
     QLabel *label_2;
     QSpacerItem *verticalSpacer_8;
-    QPushButton *buttonAddOrder;
+    QPushButton *btnDodajZamowienie;
     QPushButton *buttonModifyOrder;
-    QPushButton *buttonDeleteOrder;
+    QPushButton *btnUsunZamowienie;
     QSpacerItem *verticalSpacer_6;
     QVBoxLayout *verticalLayout_10;
     QLabel *label_3;
-    QTableView *tableView;
+    QTextEdit *txtAktualneZamowienie;
     QVBoxLayout *verticalLayout_9;
     QSpacerItem *verticalSpacer;
     QPushButton *buttonBackStolik1;
@@ -110,11 +108,11 @@ public:
         label->setMaximumSize(QSize(60, 60));
         label->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         label->setFrameShape(QFrame::Shape::NoFrame);
-        label->setPixmap(QPixmap(QString::fromUtf8("../../../../krzys/Downloads/images.jpg")));
+        label->setPixmap(QPixmap(QString::fromUtf8("C:/Users/krzys/Downloads/images.jpg")));
         label->setScaledContents(true);
         label->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
 
-        horizontalLayout->addWidget(label, 0, Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter);
+        horizontalLayout->addWidget(label);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -233,7 +231,7 @@ public:
         label_2 = new QLabel(pageStolik1);
         label_2->setObjectName("label_2");
         label_2->setMinimumSize(QSize(60, 30));
-        label_2->setMaximumSize(QSize(100, 50));
+        label_2->setMaximumSize(QSize(150, 50));
         QFont font;
         font.setPointSize(16);
         font.setBold(true);
@@ -245,12 +243,12 @@ public:
 
         verticalLayout_7->addItem(verticalSpacer_8);
 
-        buttonAddOrder = new QPushButton(pageStolik1);
-        buttonAddOrder->setObjectName("buttonAddOrder");
-        buttonAddOrder->setMinimumSize(QSize(150, 30));
-        buttonAddOrder->setMaximumSize(QSize(300, 40));
+        btnDodajZamowienie = new QPushButton(pageStolik1);
+        btnDodajZamowienie->setObjectName("btnDodajZamowienie");
+        btnDodajZamowienie->setMinimumSize(QSize(150, 30));
+        btnDodajZamowienie->setMaximumSize(QSize(300, 40));
 
-        verticalLayout_7->addWidget(buttonAddOrder, 0, Qt::AlignmentFlag::AlignHCenter);
+        verticalLayout_7->addWidget(btnDodajZamowienie, 0, Qt::AlignmentFlag::AlignHCenter);
 
         buttonModifyOrder = new QPushButton(pageStolik1);
         buttonModifyOrder->setObjectName("buttonModifyOrder");
@@ -259,12 +257,12 @@ public:
 
         verticalLayout_7->addWidget(buttonModifyOrder, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        buttonDeleteOrder = new QPushButton(pageStolik1);
-        buttonDeleteOrder->setObjectName("buttonDeleteOrder");
-        buttonDeleteOrder->setMinimumSize(QSize(150, 30));
-        buttonDeleteOrder->setMaximumSize(QSize(300, 40));
+        btnUsunZamowienie = new QPushButton(pageStolik1);
+        btnUsunZamowienie->setObjectName("btnUsunZamowienie");
+        btnUsunZamowienie->setMinimumSize(QSize(150, 30));
+        btnUsunZamowienie->setMaximumSize(QSize(300, 40));
 
-        verticalLayout_7->addWidget(buttonDeleteOrder, 0, Qt::AlignmentFlag::AlignHCenter);
+        verticalLayout_7->addWidget(btnUsunZamowienie, 0, Qt::AlignmentFlag::AlignHCenter);
 
         verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
@@ -286,12 +284,14 @@ public:
 
         verticalLayout_10->addWidget(label_3, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        tableView = new QTableView(pageStolik1);
-        tableView->setObjectName("tableView");
+        txtAktualneZamowienie = new QTextEdit(pageStolik1);
+        txtAktualneZamowienie->setObjectName("txtAktualneZamowienie");
+        txtAktualneZamowienie->setReadOnly(true);
 
-        verticalLayout_10->addWidget(tableView);
+        verticalLayout_10->addWidget(txtAktualneZamowienie);
 
         verticalLayout_10->setStretch(0, 1);
+        verticalLayout_10->setStretch(1, 4);
 
         horizontalLayout_2->addLayout(verticalLayout_10);
 
@@ -331,6 +331,8 @@ public:
         verticalLayout_4->setContentsMargins(10, 10, 10, 10);
         textEdit = new QTextEdit(pageHelp);
         textEdit->setObjectName("textEdit");
+        textEdit->setLineWrapColumnOrWidth(0);
+        textEdit->setReadOnly(true);
 
         verticalLayout_4->addWidget(textEdit);
 
@@ -344,7 +346,7 @@ public:
         buttonBack->setMinimumSize(QSize(100, 30));
         buttonBack->setMaximumSize(QSize(300, 40));
 
-        verticalLayout_4->addWidget(buttonBack, 0, Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter);
+        verticalLayout_4->addWidget(buttonBack, 0, Qt::AlignmentFlag::AlignHCenter);
 
 
         verticalLayout_3->addLayout(verticalLayout_4);
@@ -360,7 +362,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -369,7 +371,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Strona G\305\202\303\263wna", nullptr));
+        label->setText(QString());
         buttonHelp->setText(QCoreApplication::translate("MainWindow", "Pomoc", nullptr));
         buttonStolik1->setText(QCoreApplication::translate("MainWindow", "Stolik 1", nullptr));
         buttonStolik2->setText(QCoreApplication::translate("MainWindow", "Stolik 2", nullptr));
@@ -377,10 +379,10 @@ public:
         buttonStolik4->setText(QCoreApplication::translate("MainWindow", "Stolik 4", nullptr));
         buttonStolik5->setText(QCoreApplication::translate("MainWindow", "Stolik 5", nullptr));
         buttonStolik6->setText(QCoreApplication::translate("MainWindow", "Stolik 6", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "STOLIK 1", nullptr));
-        buttonAddOrder->setText(QCoreApplication::translate("MainWindow", "Dodaj zam\303\263wienie", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "STOLIK NR", nullptr));
+        btnDodajZamowienie->setText(QCoreApplication::translate("MainWindow", "Dodaj zam\303\263wienie", nullptr));
         buttonModifyOrder->setText(QCoreApplication::translate("MainWindow", "Modyfikuj zam\303\263wienie", nullptr));
-        buttonDeleteOrder->setText(QCoreApplication::translate("MainWindow", "Usu\305\204 zam\303\263wienie", nullptr));
+        btnUsunZamowienie->setText(QCoreApplication::translate("MainWindow", "Usu\305\204 zam\303\263wienie", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Aktualne Zam\303\263wienie:", nullptr));
         buttonBackStolik1->setText(QCoreApplication::translate("MainWindow", "Powr\303\263t", nullptr));
         textEdit->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
