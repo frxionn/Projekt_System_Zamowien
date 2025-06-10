@@ -71,8 +71,8 @@ QStringList DatabaseManager::getAllProducts() {
 
     QStringList temp;
 
-    for (int var = 0; var < products.length(); ++var) {
-        temp.append(products[var].name);
+    for (const Product &product : products) {
+        temp.append(product.name);
     }
     return temp;
 }
@@ -83,6 +83,15 @@ bool DatabaseManager::deleteProduct(int id) {
     query.addBindValue(id);
     if (!query.exec()) {
         qDebug() << "Błąd usuwania produktu:" << query.lastError().text();
+        return false;
+    }
+    return true;
+}
+
+bool DatabaseManager::deleteAllProducts() {
+    QSqlQuery query;
+    if (!query.exec("DELETE FROM products")) {
+        qDebug() << "Błąd usuwania wszystkich produktów:" << query.lastError().text();
         return false;
     }
     return true;
@@ -106,4 +115,24 @@ bool DatabaseManager::updateProduct(const Product &product) {
         return false;
     }
     return true;
+}
+
+Product DatabaseManager::getProductByName(const QString &name) {
+    QSqlQuery query;
+    query.prepare(
+        "SELECT id, name, price, category, available "
+        "FROM products WHERE name = ?");
+    query.addBindValue(name);
+
+    if (query.exec() && query.next()) {
+        return Product{
+            query.value(0).toInt(),
+            query.value(1).toString(),
+            query.value(2).toDouble(),
+            query.value(3).toString(),
+            query.value(4).toInt() != 0
+        };
+    }
+    // nie znaleziono – zwracamy „pusty” produkt
+    return Product();
 }
