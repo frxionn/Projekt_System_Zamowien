@@ -19,7 +19,7 @@ public:
     static QSqlDatabase getDatabase();
 
     static bool addProduct(const Product &product);
-    static QVector<Product> getAllProducts();
+    static QStringList getAllProducts();
     static bool deleteProduct(int id);
     static bool updateProduct(const Product &product);
 

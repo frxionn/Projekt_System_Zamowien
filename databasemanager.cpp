@@ -55,7 +55,7 @@ bool DatabaseManager::addProduct(const Product &product) {
     return true;
 }
 
-QVector<Product> DatabaseManager::getAllProducts() {
+QStringList DatabaseManager::getAllProducts() {
     QVector<Product> products;
     QSqlQuery query("SELECT id, name, price, category, available FROM products");
 
@@ -69,7 +69,12 @@ QVector<Product> DatabaseManager::getAllProducts() {
         products.append(p);
     }
 
-    return products;
+    QStringList temp;
+
+    for (int var = 0; var < products.length(); ++var) {
+        temp.append(products[var].name);
+    }
+    return temp;
 }
 
 bool DatabaseManager::deleteProduct(int id) {

@@ -58,11 +58,15 @@ MainWindow::MainWindow(QWidget *parent)
         DodajZamowienieDialog dialog(this);
 
         //przykładowe dane testowe
-        dialog.dodajProdukt("Pizza Margherita");
-        dialog.dodajProdukt("Kawa");
-        dialog.dodajProdukt("Herbata");
-        dialog.dodajProdukt("Frytki");
-        dialog.dodajProdukt("Piwo");
+        // dialog.dodajProdukt("Pizza Margherita");
+        // dialog.dodajProdukt("Kawa");
+        // dialog.dodajProdukt("Herbata");
+        // dialog.dodajProdukt("Frytki");
+        // dialog.dodajProdukt("Piwo");
+        QStringList list;
+        for (const QString &element : list) {
+            dialog.dodajProdukt(element);
+        }
 
         if (dialog.exec() == QDialog::Accepted) {
             QStringList wybrane = dialog.getWybraneProdukty();
