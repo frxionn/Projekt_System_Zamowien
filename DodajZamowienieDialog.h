@@ -2,7 +2,10 @@
 #define DODAJZAMOWIENIEDIALOG_H
 
 #include <QDialog>
-#include <QListWidget>
+#include <QVector>
+#include <QCheckBox>
+
+class QVBoxLayout;
 
 class DodajZamowienieDialog : public QDialog
 {
@@ -10,11 +13,15 @@ class DodajZamowienieDialog : public QDialog
 
 public:
     explicit DodajZamowienieDialog(QWidget *parent = nullptr);
-    QString getWybranyProdukt() const;
+    QStringList getWybraneProdukty() const;
+
+    // umożliwienie późniejszego dodania checkboxów
+    void dodajProdukt(const QString &nazwaProduktu);
+    void setPoczatkowoZaznaczone(const QStringList &produkty);
 
 private:
-    QListWidget *listaProduktow;
-    QString wybranyProdukt;
+    QVBoxLayout *layoutCheckboxow;
+    QVector<QCheckBox*> checkboxy;
 };
 
 #endif // DODAJZAMOWIENIEDIALOG_H

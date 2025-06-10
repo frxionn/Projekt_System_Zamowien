@@ -1,12 +1,12 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'dodajzamowieniedialog.h'
+** Meta object code from reading C++ file 'DodajZamowienieDialog.h'
 **
 ** Created by: The Qt Meta Object Compiler version 69 (Qt 6.9.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../dodajzamowieniedialog.h"
+#include "../../../../DodajZamowienieDialog.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -16,7 +16,7 @@
 
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'dodajzamowieniedialog.h' doesn't include <QObject>."
+#error "The header file 'DodajZamowienieDialog.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 69
 #error "This file was generated using the moc from 6.9.1. It"
 #error "cannot be used with the include files from this version of Qt."

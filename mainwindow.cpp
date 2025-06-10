@@ -48,31 +48,61 @@ MainWindow::MainWindow(QWidget *parent)
         ui->stackedWidget->setCurrentWidget(ui->pageStolik1);; // Przejście do strony stolik1
     });
 
-
     connect(ui->buttonBackStolik1, &QPushButton::clicked, this, [this]() {
         ui->stackedWidget->setCurrentWidget(ui->pageHome); // Powrót do strony głównej
     });
 
     //przycisk dodaj zamowienie
 
-    // connect(ui->btnDodajZamowienie, &QPushButton::clicked, this, [=]() {
-    //     DodajZamowienieDialog dialog(this);
-    //     if (dialog.exec() == QDialog::Accepted) {
-    //         QString produkt = dialog.getWybranyProdukt();
-    //         if (!produkt.isEmpty()) {
-    //             QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
-    //             aktualnyTekst += produkt + "\n";
-    //             ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
-    //         }
-    //     }
-    // });
+    connect(ui->btnDodajZamowienie, &QPushButton::clicked, this, [=]() {
+        DodajZamowienieDialog dialog(this);
 
-    // //przycisk usun zamowienie
-    // connect(ui->btnUsunZamowienie, &QPushButton::clicked, this, [=]() {
-    //     QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
-    //     aktualnyTekst = "";
-    //     ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
-    // });
+        //przykładowe dane testowe
+        dialog.dodajProdukt("Pizza Margherita");
+        dialog.dodajProdukt("Kawa");
+        dialog.dodajProdukt("Herbata");
+        dialog.dodajProdukt("Frytki");
+
+        if (dialog.exec() == QDialog::Accepted) {
+            QStringList wybrane = dialog.getWybraneProdukty();
+            if (!wybrane.isEmpty()) {
+                QString tekst = ui->txtAktualneZamowienie->toPlainText();
+                for (const QString &prod : wybrane) {
+                    tekst += prod + "\n";
+                }
+                ui->txtAktualneZamowienie->setPlainText(tekst);
+            }
+        }
+    });
+
+    //przycisk modyfikuj zamowienie
+
+    connect(ui->btnModyfikujZamowienie, &QPushButton::clicked, this, [=]() {
+        DodajZamowienieDialog dialog(this);
+
+        dialog.dodajProdukt("Pizza Margherita");
+        dialog.dodajProdukt("Kawa");
+        dialog.dodajProdukt("Herbata");
+        dialog.dodajProdukt("Frytki");
+
+        // pobiera obecne produkty z pola tekstyowego
+        QStringList obecneZamowienie = ui->txtAktualneZamowienie->toPlainText().split('\n', Qt::SkipEmptyParts);
+
+        // zaznacza, które są aktualnie w zamówieniu
+        dialog.setPoczatkowoZaznaczone(obecneZamowienie);
+
+        if (dialog.exec() == QDialog::Accepted) {
+            QStringList wybrane = dialog.getWybraneProdukty();
+            ui->txtAktualneZamowienie->setPlainText(wybrane.join("\n"));
+        }
+    });
+
+    //przycisk usun zamowienie
+    connect(ui->btnUsunZamowienie, &QPushButton::clicked, this, [=]() {
+        QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
+        aktualnyTekst = "";
+        ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
+    });
 }
 
 

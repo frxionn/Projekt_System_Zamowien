@@ -27,21 +27,21 @@
 		],
 		"files" : 
 		[
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
 			"CMakeLists.txt",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
-			"F:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
-			"F:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake"
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
+			"D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake"
 		],
 		"nodes" : 
 		[
@@ -75,19 +75,19 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 65,
-				"parent" : 0
-			},
-			{
-				"command" : 5,
-				"file" : 1,
-				"line" : 47,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
 				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 49,
 				"parent" : 0
 			},
 			{
@@ -332,37 +332,37 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Projekt_System_Zamowien_autogen/include"
+					"path" : "D:/programowanie projekt 2/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Projekt_System_Zamowien_autogen/include"
 				},
 				{
 					"backtrace" : 24,
 					"isSystem" : true,
-					"path" : "F:/Qt/6.9.1/mingw_64/include/QtCore"
+					"path" : "D:/Qt/6.9.1/mingw_64/include/QtCore"
 				},
 				{
 					"backtrace" : 24,
 					"isSystem" : true,
-					"path" : "F:/Qt/6.9.1/mingw_64/include"
+					"path" : "D:/Qt/6.9.1/mingw_64/include"
 				},
 				{
 					"backtrace" : 24,
 					"isSystem" : true,
-					"path" : "F:/Qt/6.9.1/mingw_64/mkspecs/win32-g++"
+					"path" : "D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "F:/Qt/6.9.1/mingw_64/include/QtWidgets"
+					"path" : "D:/Qt/6.9.1/mingw_64/include/QtWidgets"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "F:/Qt/6.9.1/mingw_64/include/QtGui"
+					"path" : "D:/Qt/6.9.1/mingw_64/include/QtGui"
 				},
 				{
 					"backtrace" : 7,
 					"isSystem" : true,
-					"path" : "F:/Qt/6.9.1/mingw_64/include/QtSql"
+					"path" : "D:/Qt/6.9.1/mingw_64/include/QtSql"
 				}
 			],
 			"language" : "CXX",
@@ -380,18 +380,19 @@
 				0,
 				1,
 				2,
-				6
+				6,
+				8
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "Projekt_System_Zamowien_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "Projekt_System_Zamowien_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "Projekt_System_Zamowien_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Projekt_System_Zamowien::@6890427a1f51a3e7e1df",
@@ -423,17 +424,17 @@
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "F:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Widgets.a",
+				"fragment" : "D:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Widgets.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 7,
-				"fragment" : "F:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Sql.a",
+				"fragment" : "D:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Sql.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 14,
-				"fragment" : "F:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Gui.a",
+				"fragment" : "D:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Gui.a",
 				"role" : "libraries"
 			},
 			{
@@ -458,7 +459,7 @@
 			},
 			{
 				"backtrace" : 24,
-				"fragment" : "F:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Core.a",
+				"fragment" : "D:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6Core.a",
 				"role" : "libraries"
 			},
 			{
@@ -478,7 +479,7 @@
 			},
 			{
 				"backtrace" : 39,
-				"fragment" : "F:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6EntryPoint.a",
+				"fragment" : "D:\\Qt\\6.9.1\\mingw_64\\lib\\libQt6EntryPoint.a",
 				"role" : "libraries"
 			},
 			{
@@ -509,7 +510,8 @@
 				0,
 				1,
 				2,
-				6
+				6,
+				8
 			]
 		},
 		{
@@ -518,7 +520,8 @@
 			[
 				3,
 				5,
-				7
+				7,
+				9
 			]
 		},
 		{
@@ -532,14 +535,14 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				8
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				9
+				11
 			]
 		}
 	],
@@ -583,6 +586,17 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "databasemanager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "DodajZamowienieDialog.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "DodajZamowienieDialog.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

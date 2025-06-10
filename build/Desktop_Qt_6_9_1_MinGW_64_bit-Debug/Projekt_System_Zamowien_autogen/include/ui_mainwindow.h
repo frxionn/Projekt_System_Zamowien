@@ -57,7 +57,7 @@ public:
     QLabel *label_2;
     QSpacerItem *verticalSpacer_8;
     QPushButton *btnDodajZamowienie;
-    QPushButton *buttonModifyOrder;
+    QPushButton *btnModyfikujZamowienie;
     QPushButton *btnUsunZamowienie;
     QSpacerItem *verticalSpacer_6;
     QVBoxLayout *verticalLayout_10;
@@ -250,12 +250,12 @@ public:
 
         verticalLayout_7->addWidget(btnDodajZamowienie, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        buttonModifyOrder = new QPushButton(pageStolik1);
-        buttonModifyOrder->setObjectName("buttonModifyOrder");
-        buttonModifyOrder->setMinimumSize(QSize(150, 30));
-        buttonModifyOrder->setMaximumSize(QSize(300, 40));
+        btnModyfikujZamowienie = new QPushButton(pageStolik1);
+        btnModyfikujZamowienie->setObjectName("btnModyfikujZamowienie");
+        btnModyfikujZamowienie->setMinimumSize(QSize(150, 30));
+        btnModyfikujZamowienie->setMaximumSize(QSize(300, 40));
 
-        verticalLayout_7->addWidget(buttonModifyOrder, 0, Qt::AlignmentFlag::AlignHCenter);
+        verticalLayout_7->addWidget(btnModyfikujZamowienie, 0, Qt::AlignmentFlag::AlignHCenter);
 
         btnUsunZamowienie = new QPushButton(pageStolik1);
         btnUsunZamowienie->setObjectName("btnUsunZamowienie");
@@ -381,7 +381,7 @@ public:
         buttonStolik6->setText(QCoreApplication::translate("MainWindow", "Stolik 6", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "STOLIK NR", nullptr));
         btnDodajZamowienie->setText(QCoreApplication::translate("MainWindow", "Dodaj zam\303\263wienie", nullptr));
-        buttonModifyOrder->setText(QCoreApplication::translate("MainWindow", "Modyfikuj zam\303\263wienie", nullptr));
+        btnModyfikujZamowienie->setText(QCoreApplication::translate("MainWindow", "Modyfikuj zam\303\263wienie", nullptr));
         btnUsunZamowienie->setText(QCoreApplication::translate("MainWindow", "Usu\305\204 zam\303\263wienie", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Aktualne Zam\303\263wienie:", nullptr));
         buttonBackStolik1->setText(QCoreApplication::translate("MainWindow", "Powr\303\263t", nullptr));

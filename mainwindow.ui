@@ -406,7 +406,7 @@
              </widget>
             </item>
             <item alignment="Qt::AlignmentFlag::AlignHCenter">
-             <widget class="QPushButton" name="buttonModifyOrder">
+             <widget class="QPushButton" name="btnModyfikujZamowienie">
               <property name="minimumSize">
                <size>
                 <width>150</width>
