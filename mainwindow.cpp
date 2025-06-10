@@ -104,6 +104,12 @@ MainWindow::MainWindow(QWidget *parent)
         aktualnyTekst = "";
         ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
     });
+
+    //style dla całego programu
+    //this->setStyleSheet("background-color: white;");
+    this->setStyleSheet("QMainWindow {background-color: white; } QPushButton { background-color: #c72121; border: 3px solid #fe5152; border-radius: 10px; padding: 6px; color: white; font-size: 15px; }");
+    this->setWindowTitle("Symulator Kawiarni");
+    this->setWindowIcon(QIcon(":/images/images/logo.png"));
 }
 
 
