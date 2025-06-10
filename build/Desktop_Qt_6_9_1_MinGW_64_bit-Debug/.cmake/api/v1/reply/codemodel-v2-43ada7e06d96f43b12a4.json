@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-4f428d60ccd396a3e01e.json",
+					"jsonFile" : "directory-.-Debug-7ef26ccb9a46f6dcbcac.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Projekt_System_Zamowien::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Projekt_System_Zamowien-Debug-510eb26f34c3569546e6.json",
+					"jsonFile" : "target-Projekt_System_Zamowien-Debug-6fac290c5c2427faa38a.json",
 					"name" : "Projekt_System_Zamowien",
 					"projectIndex" : 0
 				},
@@ -68,8 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/programowanie projekt 2/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug",
-		"source" : "D:/programowanie projekt 2/Projekt_System_Zamowien"
+		"build" : "C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien"
 	},
 	"version" : 
 	{

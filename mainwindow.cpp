@@ -62,6 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
         dialog.dodajProdukt("Kawa");
         dialog.dodajProdukt("Herbata");
         dialog.dodajProdukt("Frytki");
+        dialog.dodajProdukt("Piwo");
 
         if (dialog.exec() == QDialog::Accepted) {
             QStringList wybrane = dialog.getWybraneProdukty();

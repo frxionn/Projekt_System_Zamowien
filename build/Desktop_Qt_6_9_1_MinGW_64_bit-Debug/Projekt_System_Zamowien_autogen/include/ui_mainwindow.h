@@ -108,7 +108,7 @@ public:
         label->setMaximumSize(QSize(60, 60));
         label->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         label->setFrameShape(QFrame::Shape::NoFrame);
-        label->setPixmap(QPixmap(QString::fromUtf8("C:/Users/krzys/Downloads/images.jpg")));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../../../krzys/Downloads/images.jpg")));
         label->setScaledContents(true);
         label->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
 
@@ -362,7 +362,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

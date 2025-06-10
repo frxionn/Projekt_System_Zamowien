@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="pageHome">
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -72,7 +72,7 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap>C:/Users/krzys/Downloads/images.jpg</pixmap>
+             <pixmap>../../../../krzys/Downloads/images.jpg</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
