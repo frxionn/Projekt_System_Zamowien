@@ -7,6 +7,7 @@ C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_M
   F:/Qt/6.9.1/mingw_64/include/QtCore/q20type_traits.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/q20utility.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/q23utility.h \
+  F:/Qt/6.9.1/mingw_64/include/QtCore/qabstractitemmodel.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qalgorithms.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qanystringview.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qarraydata.h \
@@ -59,6 +60,7 @@ C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_M
   F:/Qt/6.9.1/mingw_64/include/QtCore/qmargins.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qmath.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qmetacontainer.h \
+  F:/Qt/6.9.1/mingw_64/include/QtCore/qmetaobject.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qmetatype.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qminmax.h \
   F:/Qt/6.9.1/mingw_64/include/QtCore/qnamespace.h \
@@ -151,6 +153,12 @@ C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_M
   F:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
   F:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
   F:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+  F:/Qt/6.9.1/mingw_64/include/QtSql/qsqldatabase.h \
+  F:/Qt/6.9.1/mingw_64/include/QtSql/qsqlquerymodel.h \
+  F:/Qt/6.9.1/mingw_64/include/QtSql/qsqltablemodel.h \
+  F:/Qt/6.9.1/mingw_64/include/QtSql/qtsql-config.h \
+  F:/Qt/6.9.1/mingw_64/include/QtSql/qtsqlexports.h \
+  F:/Qt/6.9.1/mingw_64/include/QtSql/qtsqlglobal.h \
   F:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
   F:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
   F:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \

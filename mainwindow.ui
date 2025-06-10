@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pageHome">
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -42,7 +42,7 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
            <widget class="QLabel" name="label">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
@@ -69,10 +69,10 @@
              <enum>QFrame::Shape::NoFrame</enum>
             </property>
             <property name="text">
-             <string/>
+             <string>Strona Główna</string>
             </property>
             <property name="pixmap">
-             <pixmap>C:/Users/krzys/Downloads/images.jpg</pixmap>
+             <pixmap>../../../../krzys/Downloads/images.jpg</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -459,7 +459,7 @@
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,4">
+           <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,0">
             <item alignment="Qt::AlignmentFlag::AlignHCenter">
              <widget class="QLabel" name="label_3">
               <property name="minimumSize">
@@ -486,7 +486,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QTextEdit" name="textEdit_2"/>
+             <widget class="QTableView" name="tableView"/>
             </item>
            </layout>
           </item>
@@ -575,7 +575,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
               </property>
              </widget>
             </item>
-            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
              <widget class="QPushButton" name="buttonBack">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">

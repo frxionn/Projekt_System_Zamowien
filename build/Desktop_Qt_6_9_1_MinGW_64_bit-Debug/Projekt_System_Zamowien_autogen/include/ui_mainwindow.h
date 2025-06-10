@@ -12,11 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -62,7 +64,7 @@ public:
     QSpacerItem *verticalSpacer_6;
     QVBoxLayout *verticalLayout_10;
     QLabel *label_3;
-    QTextEdit *textEdit_2;
+    QTableView *tableView;
     QVBoxLayout *verticalLayout_9;
     QSpacerItem *verticalSpacer;
     QPushButton *buttonBackStolik1;
@@ -108,11 +110,11 @@ public:
         label->setMaximumSize(QSize(60, 60));
         label->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         label->setFrameShape(QFrame::Shape::NoFrame);
-        label->setPixmap(QPixmap(QString::fromUtf8("C:/Users/krzys/Downloads/images.jpg")));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../../../krzys/Downloads/images.jpg")));
         label->setScaledContents(true);
         label->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
 
-        horizontalLayout->addWidget(label);
+        horizontalLayout->addWidget(label, 0, Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -284,13 +286,12 @@ public:
 
         verticalLayout_10->addWidget(label_3, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        textEdit_2 = new QTextEdit(pageStolik1);
-        textEdit_2->setObjectName("textEdit_2");
+        tableView = new QTableView(pageStolik1);
+        tableView->setObjectName("tableView");
 
-        verticalLayout_10->addWidget(textEdit_2);
+        verticalLayout_10->addWidget(tableView);
 
         verticalLayout_10->setStretch(0, 1);
-        verticalLayout_10->setStretch(1, 4);
 
         horizontalLayout_2->addLayout(verticalLayout_10);
 
@@ -343,7 +344,7 @@ public:
         buttonBack->setMinimumSize(QSize(100, 30));
         buttonBack->setMaximumSize(QSize(300, 40));
 
-        verticalLayout_4->addWidget(buttonBack, 0, Qt::AlignmentFlag::AlignHCenter);
+        verticalLayout_4->addWidget(buttonBack, 0, Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter);
 
 
         verticalLayout_3->addLayout(verticalLayout_4);
@@ -359,7 +360,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -368,7 +369,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QString());
+        label->setText(QCoreApplication::translate("MainWindow", "Strona G\305\202\303\263wna", nullptr));
         buttonHelp->setText(QCoreApplication::translate("MainWindow", "Pomoc", nullptr));
         buttonStolik1->setText(QCoreApplication::translate("MainWindow", "Stolik 1", nullptr));
         buttonStolik2->setText(QCoreApplication::translate("MainWindow", "Stolik 2", nullptr));
