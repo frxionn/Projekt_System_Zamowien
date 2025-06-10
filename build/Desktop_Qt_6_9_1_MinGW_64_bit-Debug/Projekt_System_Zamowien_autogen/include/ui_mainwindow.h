@@ -35,6 +35,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpacerItem *horizontalSpacer;
+    QLabel *label_4;
+    QSpacerItem *horizontalSpacer_2;
     QPushButton *buttonHelp;
     QHBoxLayout *LayoutPrzyciskiStoliki;
     QVBoxLayout *LayoutStolikicz1;
@@ -108,7 +110,7 @@ public:
         label->setMaximumSize(QSize(60, 60));
         label->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         label->setFrameShape(QFrame::Shape::NoFrame);
-        label->setPixmap(QPixmap(QString::fromUtf8("../../../../krzys/Downloads/images.jpg")));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/images/images/logo.png")));
         label->setScaledContents(true);
         label->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
 
@@ -117,6 +119,19 @@ public:
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
+
+        label_4 = new QLabel(pageHome);
+        label_4->setObjectName("label_4");
+        QFont font;
+        font.setPointSize(12);
+        font.setBold(true);
+        label_4->setFont(font);
+
+        horizontalLayout->addWidget(label_4);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
 
         buttonHelp = new QPushButton(pageHome);
         buttonHelp->setObjectName("buttonHelp");
@@ -232,10 +247,10 @@ public:
         label_2->setObjectName("label_2");
         label_2->setMinimumSize(QSize(60, 30));
         label_2->setMaximumSize(QSize(150, 50));
-        QFont font;
-        font.setPointSize(16);
-        font.setBold(true);
-        label_2->setFont(font);
+        QFont font1;
+        font1.setPointSize(16);
+        font1.setBold(true);
+        label_2->setFont(font1);
 
         verticalLayout_7->addWidget(label_2, 0, Qt::AlignmentFlag::AlignHCenter);
 
@@ -245,21 +260,21 @@ public:
 
         btnDodajZamowienie = new QPushButton(pageStolik1);
         btnDodajZamowienie->setObjectName("btnDodajZamowienie");
-        btnDodajZamowienie->setMinimumSize(QSize(150, 30));
+        btnDodajZamowienie->setMinimumSize(QSize(200, 30));
         btnDodajZamowienie->setMaximumSize(QSize(300, 40));
 
         verticalLayout_7->addWidget(btnDodajZamowienie, 0, Qt::AlignmentFlag::AlignHCenter);
 
         btnModyfikujZamowienie = new QPushButton(pageStolik1);
         btnModyfikujZamowienie->setObjectName("btnModyfikujZamowienie");
-        btnModyfikujZamowienie->setMinimumSize(QSize(150, 30));
+        btnModyfikujZamowienie->setMinimumSize(QSize(200, 30));
         btnModyfikujZamowienie->setMaximumSize(QSize(300, 40));
 
         verticalLayout_7->addWidget(btnModyfikujZamowienie, 0, Qt::AlignmentFlag::AlignHCenter);
 
         btnUsunZamowienie = new QPushButton(pageStolik1);
         btnUsunZamowienie->setObjectName("btnUsunZamowienie");
-        btnUsunZamowienie->setMinimumSize(QSize(150, 30));
+        btnUsunZamowienie->setMinimumSize(QSize(200, 30));
         btnUsunZamowienie->setMaximumSize(QSize(300, 40));
 
         verticalLayout_7->addWidget(btnUsunZamowienie, 0, Qt::AlignmentFlag::AlignHCenter);
@@ -277,10 +292,7 @@ public:
         label_3->setObjectName("label_3");
         label_3->setMinimumSize(QSize(180, 60));
         label_3->setMaximumSize(QSize(180, 60));
-        QFont font1;
-        font1.setPointSize(12);
-        font1.setBold(true);
-        label_3->setFont(font1);
+        label_3->setFont(font);
 
         verticalLayout_10->addWidget(label_3, 0, Qt::AlignmentFlag::AlignHCenter);
 
@@ -372,6 +384,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QString());
+        label_4->setText(QCoreApplication::translate("MainWindow", "Symulator Kawiarni", nullptr));
         buttonHelp->setText(QCoreApplication::translate("MainWindow", "Pomoc", nullptr));
         buttonStolik1->setText(QCoreApplication::translate("MainWindow", "Stolik 1", nullptr));
         buttonStolik2->setText(QCoreApplication::translate("MainWindow", "Stolik 2", nullptr));
