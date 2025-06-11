@@ -177,7 +177,7 @@ QStringList MainWindow::parseCurrentOrder() const
     return names;
 }
 
-/// Zachowuje bieżące zamówienie do wektora pod indeksem m_currentTable
+// Zachowuje bieżące zamówienie do wektora pod indeksem m_currentTable
 void MainWindow::saveCurrentOrder()
 {
     if (m_currentTable > 0) {
