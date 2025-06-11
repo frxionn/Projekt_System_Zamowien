@@ -3,6 +3,10 @@
 #include <QPushButton>
 #include <QScrollArea>
 #include <QWidget>
+#include <QTreeWidgetItem>
+#include <QTreeWidgetItemIterator>
+#include <QSqlQuery>
+#include <QLabel>
 
 DodajZamowienieDialog::DodajZamowienieDialog(QWidget *parent)
     : QDialog(parent)
@@ -22,17 +26,45 @@ DodajZamowienieDialog::DodajZamowienieDialog(QWidget *parent)
     scrollArea->setWidget(scrollWidget);
     mainLayout->addWidget(scrollArea);
 
+    loadProductsByCategory();
+
     // przycisk OK
     QPushButton *okButton = new QPushButton("OK", this);
     connect(okButton, &QPushButton::clicked, this, &QDialog::accept);
     mainLayout->addWidget(okButton);
 }
 
-void DodajZamowienieDialog::dodajProdukt(const QString &nazwaProduktu)
+void DodajZamowienieDialog::loadProductsByCategory()
 {
-    QCheckBox *checkbox = new QCheckBox(nazwaProduktu);
-    checkboxy.append(checkbox);
-    layoutCheckboxow->addWidget(checkbox);
+    layoutCheckboxow->setSpacing(5);
+
+    // pobierz kategorie + nazwy
+    QSqlQuery query(
+        "SELECT category, name "
+        "FROM products "
+        "ORDER BY category, name"
+        );
+
+    QString lastCat;
+    while (query.next()) {
+        const QString cat  = query.value(0).toString();
+        const QString name = query.value(1).toString();
+
+        if (cat != lastCat) {
+            // dodaj nagłówek kategorii
+            QLabel *lbl = new QLabel(cat, this);
+            QFont f = lbl->font();
+            f.setBold(true);
+            lbl->setFont(f);
+            layoutCheckboxow->addWidget(lbl);
+            lastCat = cat;
+        }
+
+        // dodaj checkbox produktu
+        QCheckBox *cb = new QCheckBox(name, this);
+        checkboxy.append(cb);
+        layoutCheckboxow->addWidget(cb);
+    }
 }
 
 void DodajZamowienieDialog::setPoczatkowoZaznaczone(const QStringList &produkty)

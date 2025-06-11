@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QVector>
 #include <QCheckBox>
+#include <QStringList>
 
 class QVBoxLayout;
 
@@ -13,15 +14,18 @@ class DodajZamowienieDialog : public QDialog
 
 public:
     explicit DodajZamowienieDialog(QWidget *parent = nullptr);
+    // Zwraca nazwy produktów, które były zaznaczone
     QStringList getWybraneProdukty() const;
 
     // umożliwienie późniejszego dodania checkboxów
-    void dodajProdukt(const QString &nazwaProduktu);
     void setPoczatkowoZaznaczone(const QStringList &produkty);
 
 private:
     QVBoxLayout *layoutCheckboxow;
     QVector<QCheckBox*> checkboxy;
+
+    // Ładuje z bazy kategorie i produkty i tworzy nagłówki + checkboxy
+    void loadProductsByCategory();
 };
 
 #endif // DODAJZAMOWIENIEDIALOG_H

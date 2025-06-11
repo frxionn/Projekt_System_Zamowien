@@ -63,81 +63,47 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnDodajZamowienie, &QPushButton::clicked, this, [=]() {
         DodajZamowienieDialog dialog(this);
 
-        QStringList list = DatabaseManager::getAllProducts();
-        for (const QString &element : list) {
-            dialog.dodajProdukt(element);
-        }
-
         if (dialog.exec() == QDialog::Accepted) {
-            QStringList wybrane = dialog.getWybraneProdukty();
+            auto wybrane = dialog.getWybraneProdukty();
             if (!wybrane.isEmpty()) {
-                QString tekst = ui->txtAktualneZamowienie->toPlainText();
-                double suma = 0.0;
-                for (const QString &nazwa : wybrane) {
-                    // pobieramy produkt wraz z ceną
-                    Product p = DatabaseManager::getProductByName(nazwa);
-                    // dopisujemy linię "Nazwa – cena zł"
-                    tekst += QString("%1 – %2 zł\n")
-                                 .arg(p.name)
-                                 .arg(QString::number(p.price, 'f', 2));
-                    suma += p.price;
-                }
-                // po pętli dodajemy pustą linię + sumę
-                tekst += "\nŁączna suma: "
-                         + QString::number(suma, 'f', 2) + " zł";
-                ui->txtAktualneZamowienie->setPlainText(tekst);
+                // pobierz zaznaczone produkty
+                const QStringList wybrane = dialog.getWybraneProdukty();
+
+                // zapisz w wektorze dla bieżącego stolika
+                m_tableOrders[m_currentTable] = wybrane;
+
+                // odśwież widok: pokaz zamówienie + przyciski + etykiety
+                showTable(m_currentTable);
             }
         }
     });
 
     //przycisk modyfikuj zamowienie
 
-    connect(ui->btnModyfikujZamowienie, &QPushButton::clicked, this, [=]() {
+    connect(ui->btnModyfikujZamowienie, &QPushButton::clicked, this, [this]() {
         DodajZamowienieDialog dialog(this);
 
-        // załaduj wszystkie produkty do dialogu
-        QStringList all = DatabaseManager::getAllProducts();
-        for (const QString &el : all)
-            dialog.dodajProdukt(el);
-
-        // pobierz aktualny tekst i wyciągnij tylko nazwy
-        QStringList lines = ui->txtAktualneZamowienie->toPlainText()
-                                .split('\n', Qt::SkipEmptyParts);
-        QStringList obecneNazwy;
-        for (const QString &line : lines) {
-            // pomiń sumę
-            if (line.startsWith("Łączna suma"))
-                continue;
-            // rozbij w miejscu " – " i weź pierwszy element (nazwę)
-            QString name = line.section(" – ", 0, 0);
-            obecneNazwy.append(name);
-        }
-        dialog.setPoczatkowoZaznaczone(obecneNazwy);
+        // wstępne zaznaczenie z tego, co już jest zapisane
+        dialog.setPoczatkowoZaznaczone(m_tableOrders[m_currentTable]);
 
         if (dialog.exec() == QDialog::Accepted) {
-            QStringList wybrane = dialog.getWybraneProdukty();
-            QString aktualnyTekst;
-            double suma = 0.0;
+            // pobierz nową listę
+            const QStringList wybrane = dialog.getWybraneProdukty();
 
-            for (const QString &nazwa : wybrane) {
-                Product p = DatabaseManager::getProductByName(nazwa);
-                aktualnyTekst += QString("%1 – %2 zł\n")
-                                     .arg(p.name)
-                                     .arg(QString::number(p.price, 'f', 2));
-                suma += p.price;
-            }
-            aktualnyTekst += "\nŁączna suma: "
-                             + QString::number(suma, 'f', 2)
-                             + " zł";
-            ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
+            // zapisz w wektorze
+            m_tableOrders[m_currentTable] = wybrane;
+
+            // odśwież widok
+            showTable(m_currentTable);
         }
     });
 
     //przycisk usun zamowienie
     connect(ui->btnUsunZamowienie, &QPushButton::clicked, this, [=]() {
-        QString aktualnyTekst = ui->txtAktualneZamowienie->toPlainText();
-        aktualnyTekst = "";
-        ui->txtAktualneZamowienie->setPlainText(aktualnyTekst);
+        // usuń zamówienie bieżącego stolika
+        m_tableOrders[m_currentTable].clear();
+        // odśwież widok i przyciski
+        showTable(m_currentTable);
     });
 
     //style dla całego programu
@@ -233,4 +199,26 @@ void MainWindow::updateButtons()
     // Modyfikuj / Usuń = tylko gdy jest aktywne zamówienie
     ui->btnModyfikujZamowienie->setEnabled(hasOrder);
     ui->btnUsunZamowienie   ->setEnabled(hasOrder);
+
+    // Zaktualizuj etykiety przycisków stolików
+    for (int i = 1; i <= 6; ++i) {
+        // Czy stolik i ma zapisane zamówienie?
+        bool occupied = !m_tableOrders[i].isEmpty();
+
+        // Budujemy tekst: "Stolik N" lub "Stolik N - Z"
+        QString label = QString("Stolik %1").arg(i);
+        if (occupied) {
+            label += " - Z";
+        }
+
+        // Przypisz do właściwego QPushButton
+        switch (i) {
+        case 1: ui->buttonStolik1->setText(label); break;
+        case 2: ui->buttonStolik2->setText(label); break;
+        case 3: ui->buttonStolik3->setText(label); break;
+        case 4: ui->buttonStolik4->setText(label); break;
+        case 5: ui->buttonStolik5->setText(label); break;
+        case 6: ui->buttonStolik6->setText(label); break;
+        }
+    }
 }

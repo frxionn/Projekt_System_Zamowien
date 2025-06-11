@@ -1,0 +1,14 @@
+# ninja log v6
+4	763	7713012638615819	Projekt_System_Zamowien_autogen/timestamp	5c47fdae92e195af
+4	763	7713012638615819	Projekt_System_Zamowien_autogen/mocs_compilation.cpp	5c47fdae92e195af
+4	763	7713012638615819	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Release/Projekt_System_Zamowien_autogen/timestamp	5c47fdae92e195af
+4	763	7713012638615819	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Release/Projekt_System_Zamowien_autogen/mocs_compilation.cpp	5c47fdae92e195af
+768	833	7713012640158127	Projekt_System_Zamowien_autogen/EWIEGA46WW/qrc_resources.cpp	bd65e3c874e2ba1f
+768	833	7713012640158127	C:/Users/twore/Documents/GitHub/Projekt_System_Zamowien/build/Desktop_Qt_6_9_1_MinGW_64_bit-Release/Projekt_System_Zamowien_autogen/EWIEGA46WW/qrc_resources.cpp	bd65e3c874e2ba1f
+850	1024	7713012640417368	CMakeFiles/Projekt_System_Zamowien.dir/Projekt_System_Zamowien_autogen/EWIEGA46WW/qrc_resources.cpp.obj	9ca0b5e118a3ff11
+836	3598	7713012640277811	CMakeFiles/Projekt_System_Zamowien.dir/main.cpp.obj	83f52d3badde69c3
+834	3608	7713012640247888	CMakeFiles/Projekt_System_Zamowien.dir/Projekt_System_Zamowien_autogen/mocs_compilation.cpp.obj	decfb1fe9cbb8b8d
+843	3840	7713012640343610	CMakeFiles/Projekt_System_Zamowien.dir/databasemanager.cpp.obj	96e1c3e32810d819
+847	4183	7713012640376052	CMakeFiles/Projekt_System_Zamowien.dir/DodajZamowienieDialog.cpp.obj	ee57cc3e653ae2cf
+840	4958	7713012640312802	CMakeFiles/Projekt_System_Zamowien.dir/mainwindow.cpp.obj	2ab4e13268aa0bb4
+4958	5164	7713012681491290	Projekt_System_Zamowien.exe	265b3668c60fd9c5
